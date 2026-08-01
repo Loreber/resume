@@ -1,0 +1,132 @@
+\documentclass[10pt,a4paper]{article}
+
+% A compact, single-column resume: readable by people and ATS parsers.
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,top=1.15cm,bottom=1.10cm,left=1.35cm,right=1.35cm]{geometry}
+\usepackage{xcolor}
+\usepackage[hidelinks,unicode]{hyperref}
+
+\hypersetup{
+  pdftitle={Currículum de Lorena Bersabé Granado},
+  pdfauthor={Lorena Bersabé Granado},
+  pdfsubject={Desarrolladora web junior},
+  pdfkeywords={desarrollo web, JavaScript, TypeScript, React, Next.js, Angular, PHP, Laravel}
+}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\definecolor{ink}{HTML}{17202A}
+\definecolor{accent}{HTML}{1F5C72}
+\definecolor{muted}{HTML}{4B5563}
+
+\color{ink}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\linespread{0.96}
+\urlstyle{same}
+
+\newcommand{\resumesection}[1]{%
+  \par\vspace{0.58em}%
+  {\color{accent}\bfseries\large\MakeUppercase{#1}}\par
+  \vspace{-0.35em}{\color{accent}\rule{\linewidth}{0.45pt}}\par
+  \vspace{0.18em}%
+}
+
+\newenvironment{tightitems}{%
+  \begin{itemize}
+    \setlength{\leftmargin}{1.15em}%
+    \setlength{\itemsep}{0.08em}%
+    \setlength{\topsep}{0.12em}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \renewcommand{\labelitemi}{\textcolor{accent}{\raisebox{0.15ex}{\scriptsize\textbullet}}}%
+}{\end{itemize}}
+
+\newcommand{\entry}[4]{%
+  \textbf{#1}\if\relax\detokenize{#2}\relax\else{} --- #2\fi
+  \hfill {\small\color{muted}#3}\\[-0.15em]
+  {\small\color{muted}#4}\par
+}
+
+\newcommand{\education}[3]{%
+  \textbf{#1} --- #2 \hfill {\small\color{muted}#3}\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{23}{25}\selectfont\bfseries Lorena Bersabé Granado}\par
+  \vspace{0.15em}
+  {\large\color{accent}\bfseries Desarrolladora web junior}\par
+  \vspace{0.28em}
+  {\small
+    Sevilla, España \;|\;
+    \href{mailto:lorbergra@gmail.com}{lorbergra@gmail.com} \;|\;
+    \href{tel:+34685014734}{+34 685 01 47 34} \;|\;
+    \href{https://loreber.vercel.app}{loreber.vercel.app}\\[-0.05em]
+    \href{https://www.linkedin.com/in/lorena-bersabe-granado}{linkedin.com/in/lorena-bersabe-granado}
+    \;|\;
+    \href{https://github.com/Loreber}{github.com/Loreber}
+  }
+\end{center}
+
+\vspace{-0.30em}
+\resumesection{Perfil}
+
+Desarrolladora web recién titulada en Desarrollo de Aplicaciones Web, con 500 horas de experiencia práctica y proyectos full-stack en PHP, React, Next.js y Angular. Su formación previa en educación aporta una mirada centrada en las personas, la comunicación clara y la accesibilidad. Interesada en crear productos web útiles, mantenibles y seguros.
+
+\resumesection{Competencias técnicas}
+
+{\small
+\textbf{Front-end:} JavaScript, TypeScript, React, Next.js, Angular, HTML, CSS, Tailwind CSS \;|\;
+\textbf{Back-end y datos:} PHP, Laravel, Java, MySQL, MongoDB, eXist-db, API REST \;|\;
+\textbf{CMS, testing y herramientas:} WordPress, WooCommerce, PHPUnit, JUnit, Git, GitHub, Linux
+}
+
+\resumesection{Experiencia}
+
+\entry{Desarrolladora web en prácticas (FCT)}{Hormigas en la Nube}{feb.--may. 2026 · 500 h}{Sevilla, España}
+\begin{tightitems}
+  \item Desarrolló desde cero un sitio web completo para un centro de estimulación temprana y atención a mayores con WordPress, WooCommerce, Elementor y LearnDash.
+  \item Ejecutó migraciones integrales de sitios y tareas de administración de servidores y bases de datos.
+  \item Realizó auditorías web, resolvió incidencias de clientes y creó videotutoriales para facilitar el uso de las soluciones entregadas.
+\end{tightitems}
+
+\resumesection{Proyectos}
+
+\textbf{\href{https://github.com/Loreber/TiraMillas}{TiraMillas --- plataforma de rutas turísticas}} \hfill {\small\color{muted}PHP · MySQL · JavaScript · Leaflet}
+\begin{tightitems}
+  \item Proyecto final en equipo con registro e inicio de sesión, tres roles, mapas interactivos, publicación moderada de anuncios y protección CSRF.
+\end{tightitems}
+
+\textbf{\href{https://loreber.vercel.app}{Portfolio personal bilingüe}} \hfill {\small\color{muted}Next.js · React · TypeScript · Tailwind CSS}
+\begin{tightitems}
+  \item Diseñó y desarrolló un portfolio responsive en español e inglés, con navegación accesible, tema claro/oscuro y metadatos SEO.
+\end{tightitems}
+
+\textbf{Libraris --- descubrimiento y gestión de lecturas} \hfill {\small\color{muted}Laravel · Inertia · React · TypeScript}
+\begin{tightitems}
+  \item Construye desde cero una plataforma de búsqueda y recomendaciones de libros, aplicando una arquitectura full-stack moderna. Proyecto en curso.
+\end{tightitems}
+
+\resumesection{Formación}
+
+\education{CFGS en Desarrollo de Aplicaciones Web}{Instituto FOC}{2024--2026}
+\education{Máster en Dirección, Evaluación y Calidad de Instituciones de Formación}{Universidad de Sevilla}{2020--2021}
+\education{Grado en Educación Primaria, mención en Educación Especial}{Universidad de Sevilla}{2015--2020}
+
+\resumesection{Formación complementaria e idiomas}
+
+{\small
+\textbf{Cursos:} Fundamentos de Python 1 y JavaScript Essentials 1 --- Cisco Networking Academy; Introducción a la Ciberseguridad (MOOC) --- Universidad Miguel Hernández / EOI-Cisco-ADA.\\[-0.05em]
+\textbf{Idiomas:} español nativo; inglés B2 (Aptis General).
+}
+
+\end{document}
