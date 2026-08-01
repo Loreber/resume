@@ -48,10 +48,10 @@
 }
 
 \newcommand{\cvsection}[1]{%
-  \par\vspace{0.3cm}
+  \par\vspace{0.38cm}
   {\bfseries\large #1}\par
   \vspace{1pt}\hrule
-  \vspace{0.2cm}
+  \vspace{0.22cm}
 }
 
 \newenvironment{highlights}{%
@@ -59,11 +59,23 @@
     \setlength{\topsep}{0.10cm}%
     \setlength{\parsep}{0.05cm}%
     \setlength{\partopsep}{0pt}%
-    \setlength{\itemsep}{0pt}%
+    \setlength{\itemsep}{0.03cm}%
     \setlength{\leftmargin}{10pt}%
     \setlength{\labelwidth}{6pt}%
     \setlength{\labelsep}{4pt}%
   }%
 }{\end{list}}
 
-\newcommand{\entryspace}{\vspace{0.15cm}}
+\newenvironment{skilllist}{%
+  \begin{list}{$\vcenter{\hbox{\small$\bullet$}}$}{%
+    \setlength{\topsep}{0.04cm}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\itemsep}{0.06cm}%
+    \setlength{\leftmargin}{10pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{4pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\entryspace}{\vspace{0.18cm}}
