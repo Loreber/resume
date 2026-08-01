@@ -7,4 +7,5 @@
 *.toc
 .DS_Store
 cv-nuevo.pdf
+output/pdf/main.pdf
 tmp/

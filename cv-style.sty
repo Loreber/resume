@@ -1,0 +1,69 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cv-style}[2026/08/01 Shared resume typography]
+
+% Match Juan Pedro Martin's resume typography with macOS's Charter family.
+\RequirePackage{fontspec}
+\setmainfont{Charter}[
+  UprightFont = * Roman,
+  BoldFont = * Bold,
+  ItalicFont = * Italic,
+  BoldItalicFont = * Bold Italic
+]
+\RequirePackage{microtype}
+\RequirePackage[
+  a4paper,
+  ignoreheadfoot,
+  top=2cm,
+  bottom=2cm,
+  left=2cm,
+  right=2cm,
+  footskip=1cm
+]{geometry}
+\RequirePackage{xcolor}
+\RequirePackage[hidelinks,unicode]{hyperref}
+
+\raggedright
+\pagestyle{empty}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\urlstyle{same}
+
+\newsavebox\ANDbox
+\sbox\ANDbox{$|$}
+\newcommand{\AND}{%
+  \unskip\cleaders\copy\ANDbox\hskip\wd\ANDbox\ignorespaces
+}
+
+\newcommand{\cvheader}[3]{%
+  \begin{center}
+    \fontsize{25pt}{25pt}\selectfont #1\par
+    \vspace{5pt}
+    \normalsize #2\par
+    \vspace{2pt}
+    \normalsize #3
+  \end{center}
+}
+
+\newcommand{\cvsection}[1]{%
+  \par\vspace{0.3cm}
+  {\bfseries\large #1}\par
+  \vspace{1pt}\hrule
+  \vspace{0.2cm}
+}
+
+\newenvironment{highlights}{%
+  \begin{list}{$\vcenter{\hbox{\small$\bullet$}}$}{%
+    \setlength{\topsep}{0.10cm}%
+    \setlength{\parsep}{0.05cm}%
+    \setlength{\partopsep}{0pt}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\leftmargin}{10pt}%
+    \setlength{\labelwidth}{6pt}%
+    \setlength{\labelsep}{4pt}%
+  }%
+}{\end{list}}
+
+\newcommand{\entryspace}{\vspace{0.15cm}}
