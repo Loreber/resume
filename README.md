@@ -1,22 +1,35 @@
-# Currículum de Lorena Bersabé Granado
+# Lorena Bersabé Granado — Resume / Currículum
 
-Dos currículums de una página, escritos en LaTeX y optimizados para lectura humana y sistemas ATS:
+One-page, ATS-friendly resumes for junior web developer Lorena Bersabé Granado, available in American English and Castilian Spanish.
 
+Currículums de una página optimizados para sistemas ATS, disponibles en inglés estadounidense y español de España.
+
+## Download / Descargar
+
+- [American English — PDF](https://github.com/Loreber/resume/raw/refs/heads/main/output/pdf/lorena-bersabe-granado-en.pdf)
+- [Español de España — PDF](https://github.com/Loreber/resume/raw/refs/heads/main/output/pdf/lorena-bersabe-granado-es.pdf)
+
+Portfolio: [loreber.vercel.app](https://loreber.vercel.app)
+
+## Source / Código fuente
+
+- `lorena-bersabe-granado-en.tex`: American English edition.
 - `lorena-bersabe-granado-es.tex`: edición en español de España.
-- `lorena-bersabe-granado-en.tex`: edición en inglés estadounidense.
+- `cv-style.sty`: shared Charter typography and page layout.
+- `main.tex`: default editor entry point for the Spanish edition.
 
-Ambos usan `cv-style.sty`, que reproduce la tipografía del currículum de Juan: Charter a 10 pt, nombre a 25 pt, títulos de sección en negrita y enlaces negros. `main.tex` apunta a la edición española para mantener un punto de entrada cómodo en el editor.
+## Build / Compilación
 
-## Compilación
+The documents use XeLaTeX and the Charter typeface included with macOS.
 
-Con `latexmk`:
+Los documentos utilizan XeLaTeX y la familia tipográfica Charter incluida en macOS.
 
 ```sh
 latexmk -xelatex lorena-bersabe-granado-es.tex
 latexmk -xelatex lorena-bersabe-granado-en.tex
 ```
 
-O directamente con XeLaTeX (dos pasadas para estabilizar enlaces y metadatos):
+Without `latexmk`, run XeLaTeX twice for each edition:
 
 ```sh
 xelatex lorena-bersabe-granado-es.tex
@@ -24,5 +37,3 @@ xelatex lorena-bersabe-granado-es.tex
 xelatex lorena-bersabe-granado-en.tex
 xelatex lorena-bersabe-granado-en.tex
 ```
-
-Los enlaces del encabezado y de los proyectos son clicables en ambos PDF.
